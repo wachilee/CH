@@ -1,0 +1,109 @@
+body{
+  font-family: "Gill Sans", sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  color: white;
+  /* text-shadow: 2px 2px 5px; */
+  overflow: hidden;
+  margin: 0 auto;
+  /* margin: 0 auto; Center the navigation bar horizontally */
+  /* width: 1450px; */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* padding: 10; */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  float: left;
+  padding: 10px 20px;
+  /* text-shadow: 2px 2px 5px; */
+}
+
+.navbar li a {
+  color: #333;
+  
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar li a:hover {
+  background-color: #ffee99;
+}
+
+h1{
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h2{
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+ 
+}
+
+h4{
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.Com {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Added for vertical centering */
+  min-height: 100vh; /* Added to ensure full viewport height */
+  margin: 0; /* Removed unnecessary margin */
+  padding: 0; /* Removed unnecessary padding */
+}
+
+.Com h1,
+.Com h2,
+.Com table,
+.Com .conversation {
+  text-align: center; /* Center text within specific elements */
+}
+
+.Com table th,
+.Com table td {
+  padding: 10px; /* Added padding for better readability */
+}
+
+.Com .conversation div {
+  margin-bottom: 10px; /* Added spacing between conversation items */
+}
+
+.up{
+  margin-top: 10px;
+}
+
+.bottom{
+  margin-bottom: 50px;
+}
