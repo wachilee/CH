@@ -294,11 +294,45 @@ const vocabularyData = [
         },
   ];
 
+  var conver = [
+      {
+        "chinese": "我 是 留学生。",
+        "pinyin": "Wǒ shì liúxuéshēng.",
+        "english": "I am an international student."
+      },
+      {
+        "chinese": "我 每天 六 点 半 起床",
+        "pinyin": "Wǒ měitiān liù diǎn bàn qǐchuáng",
+        "english": "I get up at 6:30 every day."
+      },
+      {
+        "chinese": "起床 以后 先 洗澡 然后 吃 早餐。",
+        "pinyin": "Qǐchuáng yǐhòu xiān xǐzǎo ránhòu chī zǎocān",
+        "english": "After getting up, I take a shower and then eat breakfast."
+      },
+      {
+        "chinese": "我 差 一刻 八 点 去 教室 上课。",
+        "pinyin": "Wǒ chà yīkè bā diǎn qù jiàoshì shàngkè",
+        "english": "I go to class at 7:45 every day."
+      },
+      {
+        "chinese": "我们 每天 八 点 上课, 十一 点 半 下课。",
+        "pinyin": "Wǒmen měitiān bā diǎn shàngkè, shíyī diǎn bàn xiàkè.",
+        "english": "We have class at 8:00 every day and end at 11:30."
+      },
+      {
+        "chinese": "下午 我 常常 去 图书馆 看书。",
+        "pinyin": "Xiàwǔ wǒ chángcháng qù túshū guǎn kànshū.",
+        "english": "In the afternoon, I often go to the library to read."
+      }
+    
+]
+
 function Com() {
   return (
-    <div>
+    <div className="Com">
       <Navbar />
-      <h1>Lesson 7 : </h1>
+      <h1>Lesson 7: Vocaburaly</h1>
       <table>
         <thead>
           <tr>
@@ -317,7 +351,20 @@ function Com() {
           ))}
         </tbody>
       </table>
+
+      <div className="conversation">
+        <h2>Example sentences</h2>
+        {conver.map((item) => (
+            <div key={item.who} >
+                {/* <p>{item.who}</p> */}
+              <p class="up">{item.chinese}</p>
+              <p>{item.pinyin}</p>
+              <p class="bottom">{item.english}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 export default Com;

@@ -95,11 +95,35 @@ const vocabularyData = [
       }
   ];
 
+  var conver = [
+    {
+        chinese: "山口，你喜欢什么运动？?", 
+        pinyin: "Shānkǒu, nǐ xǐhuān shénme yùndòng? ",
+        english: "Yamaguchi, what sports do you like?",
+        
+    },
+    {
+        chinese: "我喜欢跑步。我觉得跑步对身体很好。 ", 
+        pinyin: "Wǒ xǐhuān pǎobù. Wǒ juédé pǎobù duì shēntǐ hěn hǎo.",
+        english: "I like running. I think running is good for the body.",
+    },
+    {
+        chinese: " 你早上跑步还是晚上跑步？", 
+        pinyin: "Nǐ zǎoshang pǎobù háishì wǎnshàng pǎobù?",
+        english: "Do you run in the morning or in the evening?",
+    },
+    {
+        chinese: " 我一般晚上跑步。 ", 
+        pinyin: "Wǒ yībān wǎnshàng pǎobù.",
+        english: "I usually run at night.",       
+    },
+]
+
 function Com() {
   return (
-    <div>
+    <div className="Com">
       <Navbar />
-      <h1>Lesson 9 : </h1>
+      <h1>Lesson 9: Vocaburaly</h1>
       <table>
         <thead>
           <tr>
@@ -118,7 +142,20 @@ function Com() {
           ))}
         </tbody>
       </table>
+
+      <div className="conversation">
+        <h2>Example sentences</h2>
+        {conver.map((item) => (
+            <div key={item.who} >
+                {/* <p>{item.who}</p> */}
+              <p class="up">{item.chinese}</p>
+              <p>{item.pinyin}</p>
+              <p class="bottom">{item.english}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 export default Com;

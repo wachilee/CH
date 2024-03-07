@@ -54,11 +54,35 @@ var vocabularyData = [
       },
   ];
 
+  var conver = [
+    {
+        chinese: "今天几号?", 
+        pinyin: "Jīntiān jǐ hào?",
+        english: "What's the date today?",
+        
+    },
+    {
+        chinese: "今天是 10 月 1 号。", 
+        pinyin: "Jīntiān shì 10 yuè 1 hào.",
+        english: "Today is October 1st.",
+    },
+    {
+        chinese: "我明年 1 月 3 号回来。", 
+        pinyin: "Wǒ míngnián 1 yuè 3 hào huílái.",
+        english: "I'll be back on January 3rd next year.",
+    },
+    {
+        chinese: "你生日几号?", 
+        pinyin: "Nǐ shēngrì jǐ hào?",
+        english: "When is your birthday?",       
+    },
+]
+
 function Com() {
   return (
-    <div>
+    <div className="Com">
       <Navbar />
-      <h1>Lesson 5 : </h1>
+      <h1>Lesson 5: Vocaburaly</h1>
       <table>
         <thead>
           <tr>
@@ -77,7 +101,20 @@ function Com() {
           ))}
         </tbody>
       </table>
+
+      <div className="conversation">
+        <h2>Example sentences</h2>
+        {conver.map((item) => (
+            <div key={item.who} >
+                {/* <p>{item.who}</p> */}
+              <p class="up">{item.chinese}</p>
+              <p>{item.pinyin}</p>
+              <p class="bottom">{item.english}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 export default Com;

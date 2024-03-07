@@ -124,11 +124,35 @@ const vocabularyData = [
       },
   ];
 
+  var conver = [
+    {
+        chinese: " 今天天气怎么样？", 
+        pinyin: "Jīntiān tiānqì zěnme yàng?",
+        english: "How's the weather today?",
+        
+    },
+    {
+        chinese: "今天天气很冷。", 
+        pinyin: "Jīntiān tiānqì hěn lěng.",
+        english: "today's weather is very cold.",
+    },
+    {
+        chinese: " 今天你去医院看病了吗？", 
+        pinyin: "Jīntiān nǐ qù yīyuàn kànbìngle ma?",
+        english: "Did you go to the hospital today?",
+    },
+    {
+        chinese: "还没有，我想一下课就去。你怎么样？", 
+        pinyin: "Hái méiyǒu, wǒ xiǎng yī xiàkè jiù qù. Nǐ zěnme yàng?",
+        english: "Not yet, I want to go as soon as get out of class starts. How are you?",       
+    },
+]
+
 function Com() {
   return (
-    <div>
+    <div className="Com">
       <Navbar />
-      <h1>Lesson 10 : </h1>
+      <h1>Lesson 10: Vocaburaly</h1>
       <table>
         <thead>
           <tr>
@@ -147,7 +171,20 @@ function Com() {
           ))}
         </tbody>
       </table>
+
+      <div className="conversation">
+        <h2>Example sentences</h2>
+        {conver.map((item) => (
+            <div key={item.who} >
+                {/* <p>{item.who}</p> */}
+              <p class="up">{item.chinese}</p>
+              <p>{item.pinyin}</p>
+              <p class="bottom">{item.english}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 export default Com;

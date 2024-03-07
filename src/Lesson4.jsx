@@ -193,11 +193,41 @@ var vocabularyData = [
           chinese: "嫂子",
         },
   ];
+
+  var conver = [
+    {
+        chinese: "你 想 外婆了?", 
+        pinyin: "Nǐ xiǎng wàipóle?",
+        english: "Do you miss grandma?",
+        
+    },
+    {
+        chinese: "你 家 有 几 个人?", 
+        pinyin: "Nǐ jiā yǒu jǐ gèrén?",
+        english: "How many people are there in your family?",
+    },
+    {
+        chinese: "你 在 美国 工作 吗?", 
+        pinyin: "Nǐ zài měiguó gōngzuò ma?",
+        english: "Do you work in the United States?",
+    },
+    {
+        chinese: "我 不 工作, 爸爸 希望 我 去 银行 工作, 可是 我 不 喜欢。", 
+        pinyin: "Wǒ bù gōngzuò, bàba xīwàng wǒ qù yínháng gōngzuò, kěshì wǒ bù xǐhuān.",
+        english: "I don't work, and my father wants me to work in a bank, but I don't like it.",       
+    },
+    {
+        chinese:"这个 小区 真 漂亮。 你 一个 人 住 吗?",
+        pinyin:"Zhège xiǎoqū zhēn piàoliang. Nǐ yīgè rén zhù ma?",
+        english:"This neighborhood is so beautiful. do you live alone?",
+    }
+]
+
 function Com() {
   return (
-    <div>
+    <div className="Com">
       <Navbar />
-      <h1>Lesson 4 : </h1>
+      <h1>Lesson 4 : Vocaburaly</h1>
       <table>
         <thead>
           <tr>
@@ -216,7 +246,20 @@ function Com() {
           ))}
         </tbody>
       </table>
+
+      <div className="conversation">
+        <h2>Example sentences</h2>
+        {conver.map((item) => (
+            <div key={item.who} >
+                {/* <p>{item.who}</p> */}
+              <p class="up">{item.chinese}</p>
+              <p>{item.pinyin}</p>
+              <p class="bottom">{item.english}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 export default Com;
